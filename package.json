@@ -1,0 +1,10 @@
+{
+  "name": "monome-grid-simulator",
+  "version": "0.1.0",
+  "description": "A monome-grid-like simulator, for usage without a real monome",
+  "main": "index.js",
+  "repository": "https://github.com/ajaska/monome-grid-simulator",
+  "author": "Arlan Jaska <ajaska@berkeley.edu>",
+  "license": "MIT",
+  "private": false
+}
