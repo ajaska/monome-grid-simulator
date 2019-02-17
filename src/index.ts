@@ -99,7 +99,7 @@ class MonomeGridSimulator implements MonomeGrid {
       width: 5,
       height: 4,
       left: 7 * col,
-      bottom: 5 * row,
+      top: 5 * row,
       border: {
         type: "line"
       },
