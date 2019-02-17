@@ -1,5 +1,3 @@
-import "@babel/polyfill";
-
 import blessed from "blessed";
 
 export enum KeyState {
@@ -61,13 +59,17 @@ class MonomeGridSimulator implements MonomeGrid {
   }
 
   refresh(led: number[][]) {
-    if (led.length != 8) {
-      throw new Error("Invalid shape of argument to refresh");
+    if (led.length < 8) {
+      throw new Error(
+        `Invalid shape of argument to refresh: ${JSON.stringify(led)}`
+      );
     }
 
     for (let row = 0; row < 8; row++) {
-      if (led[row].length != 16) {
-        throw new Error("Invalid shape of argument to refresh");
+      if (led[row].length < 16) {
+        throw new Error(
+          `Invalid shape of argument to refresh: ${JSON.stringify(led)}`
+        );
       }
 
       for (let col = 0; col < 16; col++) {
@@ -77,6 +79,7 @@ class MonomeGridSimulator implements MonomeGrid {
           throw new Error(`Invalid brightness: ${brightness}`);
         }
         this.boxes[row][col].style.bg = color;
+        this.boxes[row][col].setContent(`${brightness || ""}`);
       }
     }
 

@@ -1,4 +1,3 @@
-import "@babel/polyfill";
 import blessed from "blessed";
 export declare enum KeyState {
     Up = 0,
