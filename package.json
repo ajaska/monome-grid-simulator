@@ -6,5 +6,27 @@
   "repository": "https://github.com/ajaska/monome-grid-simulator",
   "author": "Arlan Jaska <ajaska@berkeley.edu>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "typescript": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^11.9.4",
+    "prettier": "^1.16.4"
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "start": "node ."
+  }
 }
