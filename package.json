@@ -1,6 +1,6 @@
 {
   "name": "monome-grid-simulator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A monome-grid-like simulator, for usage without a real monome",
   "main": "index.js",
   "repository": "https://github.com/ajaska/monome-grid-simulator",
