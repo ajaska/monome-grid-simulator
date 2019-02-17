@@ -1,6 +1,6 @@
 {
   "name": "monome-grid-simulator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A monome-grid-like simulator, for usage without a real monome",
   "main": "index.js",
   "repository": "https://github.com/ajaska/monome-grid-simulator",
@@ -30,5 +30,6 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "start": "node ."
-  }
+  },
+  "types": "lib/index.d.ts"
 }
